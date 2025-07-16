@@ -107,7 +107,7 @@ class _QuizPageState extends State<QuizPage> {
     final primaryColor = Color(0xFF0D47A1);
     final backgroundColor = Color(0xFF0A3756);
 
-    // criar botões das opções
+    // criar botões das perguntas
     List<Widget> optionButtons = [];
 
     for (var option in question.options) {
@@ -120,7 +120,7 @@ class _QuizPageState extends State<QuizPage> {
             option == _selectedOption) {
           buttonColor = Colors.red; // errado fica vermelho
         } else {
-          buttonColor = primaryColor; // outros ficam azuis normais
+          buttonColor = primaryColor;
         }
       }
 

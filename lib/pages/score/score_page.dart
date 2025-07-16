@@ -107,7 +107,7 @@ class _ScorePageState extends State<ScorePage> {
                           subtitle: Padding(
                             padding: const EdgeInsets.only(top: 6),
                             child: Text(
-                              'Nível: ${score['difficulty']}   •   ${timeAgo(score['created_at'])}',
+                              'Nível: ${score['difficulty']}   -   ${timeAgo(score['created_at'])}',
                               style: const TextStyle(
                                 fontSize: 14,
                                 color: Colors.black54,

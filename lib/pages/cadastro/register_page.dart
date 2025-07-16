@@ -26,7 +26,6 @@ class _RegisterPageState extends State<RegisterPage> {
     if (username.isEmpty || password.isEmpty || confirmPassword.isEmpty) {
       setState(() {
         _error = 'Preencha todos os campos.';
-        _success = '';
       });
       return;
     }
@@ -34,7 +33,6 @@ class _RegisterPageState extends State<RegisterPage> {
     if (password.length < 6) {
       setState(() {
         _error = 'A palavra-passe deve ter pelo menos 6 caracteres.';
-        _success = '';
       });
       return;
     }
@@ -42,7 +40,6 @@ class _RegisterPageState extends State<RegisterPage> {
     if (password != confirmPassword) {
       setState(() {
         _error = 'As palavras-passe não coincidem.';
-        _success = '';
       });
       return;
     }
@@ -55,18 +52,15 @@ class _RegisterPageState extends State<RegisterPage> {
       if (result > 0) {
         setState(() {
           _success = 'Utilizador registado com sucesso!';
-          _error = '';
         });
       } else {
         setState(() {
           _error = 'Nome de utilizador já existe.';
-          _success = '';
         });
       }
     } catch (e) {
       setState(() {
         _error = 'Erro ao registar: $e';
-        _success = '';
       });
     }
   }

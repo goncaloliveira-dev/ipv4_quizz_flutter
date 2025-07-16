@@ -166,7 +166,7 @@ class _MenuPageState extends State<MenuPage> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                _medalWidget(currentMedal), // mantém seu widget personalizado
+                _medalWidget(currentMedal), // mantém seu widget atualizado
                 const SizedBox(height: 24),
                 Text(
                   'Pontuação atual: $totalScore',
@@ -255,7 +255,7 @@ class _MenuPageState extends State<MenuPage> {
     required IconData icon,
     required String label,
     required VoidCallback onPressed,
-    Color? accentColor, // parâmetro opcional adicionado aqui
+    Color? accentColor,
   }) {
     return SizedBox(
       width: double.infinity,
